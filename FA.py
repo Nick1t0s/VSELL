@@ -6,6 +6,7 @@ from utils import send_data_to_chanel_file
 
 from Bot import bot
 import uvicorn
+
 app = FastAPI()
 
 
@@ -34,4 +35,5 @@ async def upload_photo_and_text(
 
 if __name__ == "__main__":
     print(1234)
-    uvicorn.run(app, host="0.0.0.0", port=80)
+    # uvicorn.run(app, host="0.0.0.0", port=80)
+

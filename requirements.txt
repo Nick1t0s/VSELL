@@ -1,8 +1,8 @@
-uvicorn~=0.34.2
-fastapi~=0.115.12
-aiogram~=3.20.0.post0
-pydantic-settings~=2.9.1
-dotenv~=0.9.9
-python-dotenv~=1.1.0
-SQLAlchemy~=2.0.41
-requests~=2.32.3
+uvicorn
+fastapi
+aiogram
+pydantic-settings
+dotenv
+python-dotenv
+SQLAlchemy
+requests

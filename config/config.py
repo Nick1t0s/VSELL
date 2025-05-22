@@ -13,7 +13,7 @@ class Settings(BaseSettings):
 
     # Настройки бота
     BOT_TOKEN: str = os.getenv("BOT_TOKEN") # Токен бота
-    ADMINS: List[str] = list(map(int, os.getenv("ADMINS").split(","))) # ID администраторов
+    ADMINS: int = os.getenv("ADMINS") # ID администраторов
     CHANEL: str = os.getenv("CHANEL") # ID канал !!! в будущем список по регионам
 
     # Настройки базы данных
@@ -32,3 +32,5 @@ class Settings(BaseSettings):
     @property
     def DATABASE_URL_SYNC(self) -> str:
         return f"postgresql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+
+Config = Settings()

@@ -1,13 +1,15 @@
 from aiogram import Bot
 from aiogram import types
 from config import Config
-from keyboards import sale
+from keyboards import KeyboardFactory
 from aiogram.fsm.context import FSMContext
 from aiogram.enums import ParseMode
 from aiogram.types import BufferedInputFile
 
+
+
 async def send_to_chanel(message: types.Message, state: FSMContext, bot: Bot):
-    markup = sale()
+    markup = KeyboardFactory.sale()
     await state.update_data(text=message.caption)
     data = await state.get_data()
     await send_data_to_chanel(message=message, bot=bot, data=data)

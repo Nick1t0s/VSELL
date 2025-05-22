@@ -1,1 +1,1 @@
-from .inline import sale
+from .inline import KeyboardFactory

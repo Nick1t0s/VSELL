@@ -10,25 +10,14 @@ from datetime import datetime
 
 class Lot(Base):
     __tablename__ = 'lots'
-    id: Mapped[int] = mapped_column(primary_key=True)
-    created: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False)
-    model: Mapped[str] = mapped_column(nullable=False)
-    user: Mapped[bool] = mapped_column(nullable=False)
-    cost: Mapped[int] = mapped_column(nullable=False)
-    place: Mapped[str] = mapped_column(nullable=True)
-
-    statePOD: Mapped[Optional[str]] = mapped_column(nullable=True)
-    stateCART: Mapped[Optional[str]] = mapped_column(nullable=True)
-    color: Mapped[Optional[str]] = mapped_column(nullable=True)
-
-    puffs: Mapped[Optional[int]] = mapped_column(nullable=True)
-
-    taste: Mapped[Optional[int]] = mapped_column(nullable=True)
-
-    evap: Mapped[Optional[bool]] = mapped_column(nullable=True)
-    evapR: Mapped[Optional[str]] = mapped_column(nullable=True)
-    stateEvap: Mapped[Optional[str]] = mapped_column(nullable=True)
-
-    stocks: Mapped[Optional[str]] = mapped_column(nullable=True)
+    id: Mapped[int] = mapped_column(primary_key=True) # id
+    created: Mapped[datetime] = mapped_column(server_default=func.now(), nullable=False) # Дата создания
+    type: Mapped[str] = mapped_column(nullable=False) # Тип
+    model: Mapped[str] = mapped_column(nullable=False) # Модель
+    used: Mapped[bool] = mapped_column(nullable=False) # Б/у
+    cost: Mapped[int] = mapped_column(nullable=False) # Цена
+    place: Mapped[str] = mapped_column(nullable=True) # Места встречи
+    description: Mapped[str] = mapped_column(nullable=True)
+    user: Mapped[bool] = mapped_column(nullable=False) # id пользователя
 
 
