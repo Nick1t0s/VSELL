@@ -2,7 +2,8 @@ import os
 
 class Messages:
     @staticmethod
-    def chanel_message(model: str,
+    def chanel_message(type: str,
+               model: str,
                used: str,
                cost: int,
                place: str,
@@ -14,5 +15,5 @@ class Messages:
             template = f.read()
 
 
-        return template.format(model=model, used=used, cost=cost, place=place, description=description, user_id=user_id)
+        return template.format(type = type,model=model, used=used, cost=cost, place=place, description=description, user_id=user_id)
 

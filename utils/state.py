@@ -6,8 +6,9 @@ class LotAi(StatesGroup):
 class Lot(StatesGroup):
     type = State()
     model = State()
+    description = State()
     used = State()
     cost = State()
     place = State()
-    description = State()
-
+    photo = State()
+    last_media_group = State()
